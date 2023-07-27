@@ -24,5 +24,27 @@ public class DBQuerys {
 		}
 		return resultList;
 	}
-
+	
+	public static void dbUpdateQuery(Connection conn, String query) {
+		
+		try {
+			Statement statement = conn.createStatement();
+			statement.executeUpdate(query);
+			System.out.println("Am putut face update");
+			
+		} catch(SQLException e) {
+			System.out.println("Nu am putut face update");
+		}
+	}
+	public static void dbDeleteQuery(Connection conn, String query) {
+		
+		try {
+			Statement statement = conn.createStatement();
+			statement.executeUpdate(query);
+			System.out.println("Am putut face update");
+			
+		} catch(SQLException e) {
+			System.out.println("Nu am putut face update");
+		}
+	}
 }
